@@ -24,5 +24,12 @@ Scenario: Update User
 	When I make a post request to 'api/Users/Update' with following data
 		| id | LastName |             
 		| 13 | Updated  | 
-
 	Then the response status code is '200'
+
+
+Scenario: Delete User
+	Given I am a client
+	When I make a delete request to 'api/Users/{id}' with following data
+		| id  |
+		|  12 |
+	Then the response status code is '204'

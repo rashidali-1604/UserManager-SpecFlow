@@ -41,6 +41,15 @@ namespace UserManager.SpecFlow.Specs.StepDefinitions
             Response = await _client.PostAsync(postRelativeUri, content).ConfigureAwait(false);
         }
 
+        [When(@"I make a delete request to '([^']*)' with following data")]
+        public virtual async Task WhenIMakeADeleteRequestToWithFollowingData(string resourceEndPoint, Table table)
+        {
+            var user = table.CreateInstance<User>();
+
+            var postRelativeUri = new Uri(resourceEndPoint.Replace("{id}", user.Id.ToString()), UriKind.Relative);
+            Response = await _client.DeleteAsync(postRelativeUri).ConfigureAwait(false);
+        }
+
         [Then(@"the response status code is '([^']*)'")]
         public void ThenTheResponseStatusCodeIs(int statusCode)
         {
