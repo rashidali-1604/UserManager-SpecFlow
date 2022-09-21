@@ -114,16 +114,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.Given("I am a client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "EmailAddress"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Test",
                             "User",
                             "testUser@mailinator.com"});
 #line 12
- testRunner.When("I make a post request to \'api/Users/Create\' with following data", ((string)(null)), table1, "When ");
+ testRunner.When("I make a post request to \'api/Users/Create\' with following data", ((string)(null)), table2, "When ");
 #line hidden
 #line 16
  testRunner.Then("the response status code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -163,14 +163,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 23
  testRunner.Given("I am a client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
                             "LastName"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "13",
                             "Updated"});
 #line 24
- testRunner.When("I make a post request to \'api/Users/Update\' with following data", ((string)(null)), table2, "When ");
+ testRunner.When("I make a post request to \'api/Users/Update\' with following data", ((string)(null)), table3, "When ");
 #line hidden
 #line 27
  testRunner.Then("the response status code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -210,12 +210,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 31
  testRunner.Given("I am a client", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "id"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "12"});
 #line 32
- testRunner.When("I make a delete request to \'api/Users/{id}\' with following data", ((string)(null)), table3, "When ");
+ testRunner.When("I make a delete request to \'api/Users/{id}\' with following data", ((string)(null)), table4, "When ");
 #line hidden
 #line 35
  testRunner.Then("the response status code is \'204\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
